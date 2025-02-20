@@ -162,8 +162,32 @@ print("*****************")
 # print(f"162. satır: {fonk2+100}")
 print("*****************")
 
+# sınıflar => classlar
+# modules
+# paket yönetimi
+# self => this
 
+class Human:
+    name = "Halit"
+    # built-in # constructor # initialize
+    def __init__(self,name):
+        self.name = name
+        print("Bir human instance'i üretildi")
+    def __str__(self):
+        return f"STR Fonksiyonundan dönen değer: {self.name}" 
+    def talk(self,sentence):
+        print(f"{self.name}: {sentence}")
+    def walk(self):
+        print(f"{self.name} is walking")
 
+# instance => örnek
+human1 = Human("Enes")
+human1.talk("Merhaba")
+human1.walk()
+print(human1)
 
-# döngüler
+human2 = Human("Halit")
+human2.talk("Selam")
+human2.walk()
+print(human2)
 
