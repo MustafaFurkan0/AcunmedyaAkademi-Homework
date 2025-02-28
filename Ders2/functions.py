@@ -39,6 +39,19 @@ print(sum(5))
 
 # **kwargs -> araştırma ve uygulama 
 
+def selamla(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+selamla(ad="Mustafa", soyad="Yılmaz", yas=25)
+
+def kullanici_bilgisi(isim, **bilgiler):
+    print(f"İsim: {isim}")
+    for key, value in bilgiler.items():
+        print(f"{key}: {value}")
+
+kullanici_bilgisi("Mustafa", yas=22, sehir="Bursa", meslek="Mühendis")
+
 # lamdba fpnksiyonları 
 # tek satırlık fonksiyonları kısaca tanımlama yöntemi
 topla = lambda a,b: a+b
@@ -47,9 +60,4 @@ selamla = lambda isim: print(f"Merhaba, {isim}")
 print(topla(3,5))
 print(selamla("Mustafa"))
 
-# 
-
-
-
-
-
+#
